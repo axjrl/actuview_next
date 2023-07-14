@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import NewVideos from "@/components/NewVideos/NewVideos";
 
 export default function Home() {

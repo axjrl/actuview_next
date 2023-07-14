@@ -1,11 +1,8 @@
 "use client"
 import {ChangeEvent, FormEvent, useRef, useState} from "react";
 import {userStore} from "@/store/userStore";
-import {Languages, User} from "@/types/User";
-import {cookies} from "next/headers";
+import {Languages} from "@/types/User";
 import {useOnClickOutside} from "next/dist/client/components/react-dev-overlay/internal/hooks/use-on-click-outside";
-import {Simulate} from "react-dom/test-utils";
-import select = Simulate.select;
 
 const SelectLanguage = () => {
     const [opened, setOpened] = useState(false)

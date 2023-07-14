@@ -1,8 +1,7 @@
 import { create } from 'zustand'
 import {Languages, User} from "@/types/User";
-import {createJSONStorage, persist} from "zustand/middleware";
+import {persist} from "zustand/middleware";
 import Cookies from "universal-cookie";
-import sidebar from "@/components/Sidebar/Sidebar";
 
 interface userState extends User {
     setLang:(langs: Array<Languages>) => void
@@ -17,7 +16,7 @@ const cookies = new Cookies();
 // }))
 export const userStore = create<userState>()(
     persist(
-        (set, get) => ({
+        (set) => ({
             lang_preferences: cookies.get('lang_preferences') || ["cz", "en", "fr", "de", "lt"],
             setLang: (langs) => {
                 set({ lang_preferences: langs });
