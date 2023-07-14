@@ -1,38 +1,21 @@
 "use client"
-import ActiveLink from "@/components/Sidebar/ActiveLink/ActiveLink";
 import {userStore} from "@/store/userStore";
+import SidebarLink from "@/components/Sidebar/SidebarLink";
 
 const Sidebar = () => {
     const [sidebar] = userStore((state)=>[state.sidebar]);
-    const activeLinkClassname= `${!sidebar ? "text-xs text-center" :"pl-10"} py-3 w-full block text-primary`
-    const linkClassname= `${!sidebar ? "text-xs text-center" : "pl-10"} py-3 w-full block`;
+
     return (
-        <div className={`max-lg:opacity-0 bg-white h-screen fixed z-40  ${sidebar ? "w-60" : "w-20"}`}>
+        <div className={`max-lg:opacity-0 max-xl:w-20 bg-white h-screen fixed z-40  ${sidebar ? "w-60" : "w-20"}`}>
             <nav className={"mt-7"}>
-                <ActiveLink className={linkClassname} href={"/"} activeClassName={activeLinkClassname}>
-                    Home
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/video"} activeClassName={activeLinkClassname}>
-                    Videos
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/news"} activeClassName={activeLinkClassname}>
-                    News
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/events"} activeClassName={activeLinkClassname}>
-                    Events
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/join"} activeClassName={activeLinkClassname}>
-                    Join
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/partners"} activeClassName={activeLinkClassname}>
-                    Partners
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/career"} activeClassName={activeLinkClassname}>
-                    Career
-                </ActiveLink>
-                <ActiveLink className={linkClassname} href={"/about"} activeClassName={activeLinkClassname}>
-                    About
-                </ActiveLink>
+                <SidebarLink minimized={!sidebar} href={"/"} text={"Home"}/>
+                <SidebarLink minimized={!sidebar} href={"/video"} text={"Videos"}/>
+                <SidebarLink minimized={!sidebar} href={"/news"} text={"News"}/>
+                <SidebarLink minimized={!sidebar} href={"/events"} text={"Events"}/>
+                <SidebarLink minimized={!sidebar} href={"/join"} text={"Join"}/>
+                <SidebarLink minimized={!sidebar} href={"/partners"} text={"Partners"}/>
+                <SidebarLink minimized={!sidebar} href={"/career"} text={"Career"}/>
+                <SidebarLink minimized={!sidebar} href={"/about"} text={"About"}/>
             </nav>
         </div>
     );

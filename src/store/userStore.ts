@@ -10,10 +10,6 @@ interface userState extends User {
 }
 const cookies = new Cookies();
 
-// export const userStore = create<userState>((set) => ({
-//     lang_preferences: ["cz", "en", "fr", "de", "lt"],
-//     setLang: (langs) => set({lang_preferences: langs}),
-// }))
 export const userStore = create<userState>()(
     persist(
         (set) => ({
@@ -22,7 +18,7 @@ export const userStore = create<userState>()(
                 set({ lang_preferences: langs });
                 cookies.set('lang_preferences', langs);
             },
-            sidebar: false,
+            sidebar: true,
             toggleSidebar: () => set((state) => ({ sidebar: !state.sidebar})),
         }),
         {
