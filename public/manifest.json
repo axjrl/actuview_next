@@ -1,0 +1,22 @@
+{
+  "name": "actuview.com",
+  "short_name": "actuview",
+  "start_url": "https://dev.react.fe.actuview.com/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "/mini_logo_256.png",
+      "type": "image/png",
+      "sizes": "256x256",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/mini_logo_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

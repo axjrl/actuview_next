@@ -1,5 +1,5 @@
 
-const Partner = () => {
+const News = () => {
     return (
         <div>
 
@@ -7,4 +7,4 @@ const Partner = () => {
     );
 };
 
-export default Partner;
+export default News;
