@@ -10,5 +10,31 @@ html, body {
 h3 {
   font-size: 1.84rem;
   font-weight: 500;
-
+}
+@layer components {
+  .sidebar_link {
+      padding-left: 2.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      width: 100%;
+      display: block;
+  }
+    .sidebar_link_mini {
+        text-align: center;
+        font-size: 0.75rem;
+        padding-left: 0;
+        width: 100%;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        display: block;
+    }
+    @media screen and (max-width: 1280px) {
+        .sidebar_link {
+            text-align: center;
+            font-size: 0.75rem;
+            padding-left: 0;
+            width: 100%;
+            display: block;
+        }
+    }
 }

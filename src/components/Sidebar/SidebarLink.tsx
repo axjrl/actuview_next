@@ -1,12 +1,13 @@
+"use client"
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 
 const SidebarLink = ({href, text, minimized}: {href: string, text: string, minimized: boolean}) => {
-
+    console.log(minimized, href)
     return (
         <ActiveLink
-            className={`${minimized && "text-xs text-center pl-0"} max-xl:text-xs max-xl:text-center max-xl:pl-0 pl-10 py-3 w-full block`}
+            className={minimized ? "sidebar_link_mini" : `sidebar_link`}
             href={href}
-            activeClassName={`${minimized && "text-xs text-center pl-0"} max-xl:text-xs max-xl:text-center max-xl:pl-0 pl-10 py-3 w-full block text-primary`}
+            activeClassName={`${minimized ? "sidebar_link_mini" : "sidebar_link"} text-primary`}
         >
             {text}
         </ActiveLink>

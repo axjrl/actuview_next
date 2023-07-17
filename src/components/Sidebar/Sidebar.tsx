@@ -6,7 +6,7 @@ const Sidebar = () => {
     const [sidebar] = userStore((state)=>[state.sidebar]);
 
     return (
-        <div className={`max-lg:opacity-0 max-xl:w-20 bg-white h-screen fixed z-40  ${sidebar ? "w-60" : "w-20"}`}>
+        <div className={`max-lg:hidden max-xl:w-20 bg-white h-screen fixed z-40  ${sidebar ? "w-60" : "w-20"}`}>
             <nav className={"mt-7"}>
                 <SidebarLink minimized={!sidebar} href={"/"} text={"Home"}/>
                 <SidebarLink minimized={!sidebar} href={"/video"} text={"Videos"}/>
