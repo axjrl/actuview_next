@@ -4,7 +4,7 @@ import {SliderData} from "@/utils/queryHelpers";
 import {useRef, useState} from "react";
 import {Navigation} from "swiper/modules";
 import {Autoplay} from "swiper/modules";
-import 'swiper/css';
+import "swiper/swiper.min.css";
 import Image from "next/image";
 import Link from "next/link";
 

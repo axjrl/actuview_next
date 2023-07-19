@@ -21,7 +21,7 @@ const Footer = () => {
                         <hr className="border-white mb-5"/>
                         <p className="quicklinks-p"><a href="/">Home</a></p>
                         <p className="quicklinks-p"><a href="/pages/view/id/22?">Newsletter</a></p>
-                        <p className="quicklinks-p"><a href="/pages/view/id/26?">FAQ's</a></p>
+                        <p className="quicklinks-p"><a href="/pages/view/id/26?">FAQ`s</a></p>
                         <p className="quicklinks-p"><a href="/pages/view/id/1">Legal</a></p>
                         <p className="quicklinks-p"><a href="/pages/view/id/2">Data Protection</a></p>
                         <p className="quicklinks-p"><a href="/cookieconsent">Cookie Consent</a></p>
