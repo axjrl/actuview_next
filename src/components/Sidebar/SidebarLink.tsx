@@ -1,13 +1,17 @@
-"use client"
-import ActiveLink from "@/components/ActiveLink/ActiveLink";
+import { useEffect, useState } from 'react';
+import ActiveLink from '@/components/ActiveLink/ActiveLink';
 
-const SidebarLink = ({href, text, minimized}: {href: string, text: string, minimized: boolean}) => {
-    console.log(minimized, href)
+const SidebarLink = ({ href, text, minimized }: { href: string, text: string, minimized: boolean }) => {
+
+    const linkClassName = minimized ? 'sidebar_link_mini' : 'sidebar_link'
+
+    const activeLinkClassName = `${minimized ? 'sidebar_link_mini' : 'sidebar_link'} text-primary`
+
     return (
         <ActiveLink
-            className={minimized ? "sidebar_link_mini" : `sidebar_link`}
+            className={linkClassName}
             href={href}
-            activeClassName={`${minimized ? "sidebar_link_mini" : "sidebar_link"} text-primary`}
+            activeClassName={activeLinkClassName}
         >
             {text}
         </ActiveLink>

@@ -10,11 +10,11 @@ type ActiveLinkProps = LinkProps & {
 }
 
 const ActiveLink = ({href, activeClassName, className, children, ...props}: ActiveLinkProps) => {
-    // Splits are here for two and more levels of menu (not sure that this is the best approach)
+    // Splits are here for two and more levels of menu (not sure is that the best approach)
     const path= usePathname().split("/")[1];
     const active = path === href.split("/")[1];
     return (
-        <Link className={active ? activeClassName : className} href={href} {...props}>
+        <Link className={`${active ? activeClassName : className}`} href={href} {...props}>
             {children}
         </Link>
     )

@@ -10,15 +10,12 @@ module.exports = {
         gray: "#414141",
         primary: "#F39200",
         primary_text: "#313131",
-        background_main: "#F6F6F6"
+        background_main: "#F6F6F6",
+        light_gray: "#C2C2C2",
+        transparent_gray: "rgba(49, 49, 49, 0.5)"
       },
       screens: {
         sm: "479px"
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },

@@ -1,10 +1,15 @@
 import NewVideos from "@/components/NewVideos/NewVideos";
+import SwiperWrap from "@/components/Swiper/SwiperWrap";
+import CommunityPartners from "@/components/CommunityPartners/CommunityPartners";
+import ContentPartners from "@/components/ContentPartners/ContentPartners";
 
 export default function Home() {
   return (
     <div className="">
-      <p>Hello world {process.env.VIMP_API_KEY}</p>
+        <SwiperWrap/>
+        <ContentPartners/>
         <NewVideos/>
+        <CommunityPartners/>
     </div>
   )
 }

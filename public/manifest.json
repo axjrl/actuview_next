@@ -1,7 +1,7 @@
 {
   "name": "actuview.com",
   "short_name": "actuview",
-  "start_url": "https://dev.react.fe.actuview.com/",
+  "start_url": "http://localhost:3000/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",

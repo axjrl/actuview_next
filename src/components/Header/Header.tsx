@@ -2,11 +2,12 @@ import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import Toggle from "@/components/Header/Toggle";
+import ProfileBar from "@/components/Header/ProfileBar";
 
 const Header = () => {
     return (
         <header className={"sticky top-0 z-40"}>
-            <div className="h-10 bg-gray flex justify-end items-center border-b-2 border-primary">
+            <div className="max-lg:text-sm max-sm:text-xs h-10 bg-gray flex justify-end items-center border-b-2 border-primary">
                 <Link className="ml-5 text-white" target={"_blank"} href={"/"}>actuview</Link>
                 <Link className="ml-5 text-white" target={"_blank"} href={"https://www.actupool.com/en"}>actupool</Link>
                 <Link className="ml-5 mr-5 text-white" target={"_blank"} href={"https://actuarial-media.com/"}>amc - actuarial media center</Link>
@@ -14,8 +15,8 @@ const Header = () => {
             <div className="px-10 max-sm:pr-5 flex justify-between items-center h-[70px] bg-white">
                 <div className={"flex items-center"}>
                     <Toggle/>
-                    <Link className={"ml-10"} href={"/"}>
-                        <Image priority={true} className={"max-lg:w-[135px] max-lg:h-7 max-lg:ml-7"} alt={"logo"} width={171} height={35} src={"/logo.png"}/>
+                    <Link href={"/"}>
+                        <Image priority={true} className={"max-lg:w-[135px] max-lg:h-7 ml-10 max-lg:ml-5"} alt={"logo"} width={171} height={35} src={"/logo.png"}/>
                     </Link>
                 </div>
                 <div>
@@ -29,11 +30,7 @@ const Header = () => {
                         </div>
                     </form>
                 </div>
-                <div className={"flex items-center h-[70px]"}>
-                    <Link href={"/login"}>Login</Link>
-                    <span className="h-6 mx-2.5 w-0.5 bg-primary"></span>
-                    <Link href={"/signup"}>Register</Link>
-                </div>
+                <ProfileBar/>
             </div>
         </header>
     );
