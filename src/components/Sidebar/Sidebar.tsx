@@ -1,12 +1,6 @@
 "use client"
 import {sidebarStore} from "@/store/sidebarStore";
-import {useEffect, useState} from "react";
-import {cookies} from "next/headers";
-import Cookies from "universal-cookie";
-import dynamic from "next/dynamic";
 import SidebarLink from "@/components/Sidebar/SidebarLink";
-import {usePersistedState} from "@/hooks/usePersistedState";
-import Link from "next/link";
 
 const Sidebar = () => {
     const sidebar = sidebarStore(state => state.sidebar);

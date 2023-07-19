@@ -1,5 +1,4 @@
 "use client"
-import React, {useEffect, useState} from "react";
 import {sidebarStore} from "@/store/sidebarStore";
 
 const ContentWrapper = ({children}: {children: React.ReactNode}) => {

@@ -1,12 +1,11 @@
 import { create } from 'zustand'
 import {User} from "@/types/User";
-import Cookies from "universal-cookie";
 
 interface userState extends User {
     sidebar: boolean
     toggleSidebar: () => void
 }
-const cookies = new Cookies();
+// const cookies = new Cookies();
 // export const userStore = create<userState>()(
 //     persist(
 //         (set, get) => ({

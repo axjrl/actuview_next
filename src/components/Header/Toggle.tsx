@@ -1,8 +1,6 @@
 "use client"
 import {sidebarStore} from "@/store/sidebarStore";
-import {useEffect, useState} from "react";
-import Cookies from "universal-cookie";
-import {state} from "sucrase/dist/types/parser/traverser/base";
+
 
 const Toggle = () => {
     const toggleSidebar = sidebarStore(state => state.toggleSidebar)

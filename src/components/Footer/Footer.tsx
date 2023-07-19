@@ -1,8 +1,3 @@
-
-
-import {sidebarStore} from "@/store/sidebarStore";
-import {state} from "sucrase/dist/types/parser/traverser/base";
-
 const Footer = () => {
     return (
         <footer className="bg-gray">

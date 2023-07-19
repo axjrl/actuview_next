@@ -1,11 +1,7 @@
 "use client"
 import {ChangeEvent, FormEvent, useEffect, useRef, useState} from "react";
-import {sidebarStore} from "@/store/sidebarStore";
 import {Languages} from "@/types/User";
 import {useOnClickOutside} from "next/dist/client/components/react-dev-overlay/internal/hooks/use-on-click-outside";
-import {cookies} from "next/headers";
-import {Simulate} from "react-dom/test-utils";
-import select = Simulate.select;
 import Cookies from "universal-cookie";
 
 const SelectLanguage = ({minimized}: {minimized: boolean}) => {

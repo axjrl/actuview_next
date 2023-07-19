@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import ActiveLink from '@/components/ActiveLink/ActiveLink';
 
 const SidebarLink = ({ href, text, minimized }: { href: string, text: string, minimized: boolean }) => {
